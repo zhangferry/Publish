@@ -46,7 +46,7 @@ public struct PublishingContext<Site: Website> {
         self.stepName = firstStepName
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.timeZone = .current
         self.dateFormatter = dateFormatter
     }
