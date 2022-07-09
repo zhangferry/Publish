@@ -94,4 +94,10 @@ public extension DeploymentMethod {
         let prefix = useSSH ? "git@github.com:" : "https://github.com/"
         return git("\(prefix)\(repository).git", branch: branch)
     }
+    
+    /// Deploy a website to a given servier git repository
+    ///  - parameter repository: git repository
+    static func server(_ repository: String, branch: String = "master") -> Self {
+        return git("\(repository)", branch: branch)
+    }
 }

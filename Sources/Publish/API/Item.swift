@@ -56,8 +56,16 @@ internal extension Item {
     }
 }
 
+private let dateFormatter = DateFormatter()
+
+
 private extension Item {
     func makeAbsolutePath() -> Path {
-        "\(sectionID.rawValue)/\(relativePath)"
+        let date = content.date
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+//        let component = Calendar.current.dateComponents([.year, .month, .day], from: date)
+//        "\(sectionID.rawValue)/\(relativePath)"
+        let datePath = dateFormatter.string(from: date)
+        return "\(datePath)/\(relativePath)"
     }
 }

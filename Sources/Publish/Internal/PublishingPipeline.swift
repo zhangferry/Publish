@@ -18,10 +18,11 @@ internal struct PublishingPipeline<Site: Website> {
 extension PublishingPipeline {
     func execute(for site: Site, at path: Path?) throws -> PublishedWebsite<Site> {
         let stepKind = resolveStepKind()
-
+        
+        // 每次都清空output
         let folders = try setUpFolders(
             withExplicitRootPath: path,
-            shouldEmptyOutputFolder: stepKind == .generation
+            shouldEmptyOutputFolder: true
         )
 
         let steps = self.steps.flatMap { step in
@@ -139,9 +140,10 @@ private extension PublishingPipeline {
     }
 
     func runnableSteps(ofKind kind: Step.Kind, from step: Step) -> [RunnableStep] {
-        switch step.kind {
-        case .system, kind: break
-        default: return []
+        
+        let runnable = step.kind == kind || step.kind == .system || kind == .deployment
+        if !runnable {
+            return []
         }
 
         switch step.body {
