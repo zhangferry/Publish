@@ -15,7 +15,7 @@ let package = Package(
         .executable(name: "publish-cli", targets: ["PublishCLI"])
     ],
     dependencies: [
-        .package(name: "Ink", url: "https://github.com/zhangferry/Ink.git", branch: "ferry_dev"),
+        .package(name: "Ink", url: "https://github.com/zhangferry/Ink.git", .branch("ferry_dev")),
 //        .package(path: "/Users/zhangferry/Desktop/Excellent/Ink"),
         .package(name: "Plot", url: "https://github.com/johnsundell/plot.git", from: "0.9.0"),
         .package(name: "Files", url: "https://github.com/johnsundell/files.git", from: "4.0.0"),
