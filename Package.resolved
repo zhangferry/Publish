@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "CollectionConcurrencyKit",
+        "repositoryURL": "https://github.com/johnsundell/collectionConcurrencyKit.git",
+        "state": {
+          "branch": null,
+          "revision": "2e4984dcaed6432f4eff175f6616ba463428cd8a",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "Files",
         "repositoryURL": "https://github.com/johnsundell/files.git",
         "state": {
@@ -21,11 +30,11 @@
       },
       {
         "package": "Ink",
-        "repositoryURL": "https://github.com/johnsundell/ink.git",
+        "repositoryURL": "https://github.com/zhangferry/Ink.git",
         "state": {
-          "branch": null,
-          "revision": "77c3d8953374a9cf5418ef0bd7108524999de85a",
-          "version": "0.5.1"
+          "branch": "ferry_dev",
+          "revision": "ad35870925eb7bc74cad0750c687cd1c1ba6bad3",
+          "version": null
         }
       },
       {
